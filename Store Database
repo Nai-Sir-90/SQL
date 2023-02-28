@@ -1,0 +1,26 @@
+I first created a Database for a clothing store.
+
+CREATE TABLE Fly_Guy_Nai (id INTEGER PRIMARY KEY, Item TEXT, Price INTEGER, Size TEXT, Color TEXT);
+
+INSERT INTO Fly_Guy_Nai VALUES (1, "North Face Hoodie", 5, "XXL", "red");
+INSERT INTO Fly_Guy_Nai VALUES (2, "Levi's Joggers", 3, "XL", "Khaki");
+INSERT INTO Fly_Guy_Nai VALUES (3, "Plain White Shirt", 10, "L", "White");
+INSERT INTO Fly_Guy_Nai VALUES (4, "Pajamas", 35, "M", "Mono Plaid");
+INSERT INTO Fly_Guy_Nai VALUES (5, "Boxers", 4, "M", "Mixed");
+INSERT INTO Fly_Guy_Nai VALUES (6, "Socks", 12, "L", "Mixed");
+INSERT INTO Fly_Guy_Nai VALUES (7, "Nike Shirt", 23, "S", "Black");
+INSERT INTO Fly_Guy_Nai VALUES (8, "Adidas Shirt", 21, "L", "Red");
+INSERT INTO Fly_Guy_Nai VALUES (9, "Adidas Jogger", 14, "XL", "Black");
+INSERT INTO Fly_Guy_Nai VALUES (10, "Levi's Cargo Shorts", 32, "M", "White");
+INSERT INTO Fly_Guy_Nai VALUES (11, "Plain Black Shirt", 12, "XL", "Black");
+INSERT INTO Fly_Guy_Nai VALUES (12, "Cat Socks", 24, "M", "Multi");
+INSERT INTO Fly_Guy_Nai VALUES (13, "Dog Socks", 21, "L", "Cream");
+INSERT INTO Fly_Guy_Nai VALUES (14, "Straight Jacket", 23, "XXL", "White");
+INSERT INTO Fly_Guy_Nai VALUES (15, "Baseball Hat", 12, "M", "Blue");
+
+
+-Display database by price.
+SELECT * FROM Fly_Guy_Nai ORDER BY Price;
+
+--Display the highest price of all items.
+SELECT MAX(Price) FROM Fly_Guy_Nai;
