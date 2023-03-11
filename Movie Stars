@@ -1,0 +1,60 @@
+CREATE TABLE movie_stars 
+(id INTEGER PRIMARY KEY, 
+fullname TEXT, 
+hometown TEXT,
+age INTEGER);
+
+
+    INSERT INTO movie_stars (Fullname, hometown,
+    age)
+    VALUES ("Kevin Hart", "Philadelphia,PA", 43);
+    INSERT INTO movie_stars (Fullname, hometown,
+    age)
+    VALUES ("The Rock", "Hayward, CA", 50);
+    INSERT INTO movie_stars (Fullname, hometown,
+    age)
+    VALUES ("Ryan Reynolds", "Vancouver, BC, Canada", 46);
+    INSERT INTO movie_stars (Fullname, hometown,
+    age)
+    VALUES ("Ice Cube", "Los Angeles, CA", 53);
+    INSERT INTO movie_stars (Fullname, hometown,
+    age)
+    VALUES ("Robert DeNiro", "New York City, NY", 79);
+    INSERT INTO movie_stars (Fullname, hometown,
+    age)
+    VALUES ("Issa Rae", "Los Angeles, CA", 38);
+    INSERT INTO movie_stars (Fullname, hometown,
+    age)
+    VALUES ("Chris Evans", "Boston, MA", 41);
+    INSERT INTO movie_stars (Fullname, hometown,
+    age)
+    VALUES ("Michael B Jordan", "Santa Ana, CA", 36);
+
+SELECT * FROM movie_stars;
+
+CREATE TABLE movies 
+(id INTEGER PRIMARY KEY, 
+Star_id INTEGER, 
+title TEXT, 
+released INTEGER);
+
+    INSERT INTO movies (Star_id, Title, Released)
+    VALUES (1, "Night School",2018);
+    INSERT INTO movies (Star_id, Title, Released)
+    VALUES (5, "The Irishman", 2019);
+    INSERT INTO movies (Star_id, Title, Released)
+    VALUES (7, "Captain America", 2011);
+    INSERT INTO movies (Star_id, Title, Released)
+    VALUES (6, "The Lovebirds", 2020);
+    INSERT INTO movies (Star_id, Title, Released)
+    VALUES (2, "Black Adam", 2021);
+    INSERT INTO movies (Star_id, Title, Released)
+    VALUES (3,"Deadpool", 2016);
+    INSERT INTO movies (Star_id, Title, Released)
+    VALUES (8, "Without Remorse", 2021);
+    
+    
+SELECT movie_stars.fullname, movies.title, movies.released FROM movie_stars
+    JOIN movies
+    ON movie_stars.id=movies.star_id
+    WHERE released < 2020 ORDER BY released;
