@@ -3,13 +3,13 @@ Show Customers (their full names, customer ID, and country) who are not in the U
 SELECT customerID, Firstname, Lastname, country FROM chinook.
 WHERE country <> 'USA';
 
-Wrote a query where i only showed customers from brazil.
+Wrote a query where I only showed customers from brazil.
 
 
 SELECT * FROM chinook.customers
 WHERE country = 'Brazil';
 
-Found invoices from customers in brazil.
+Found invoices from customers in Brazil.
 
 SELECT firstname, lastname, invoiceID, InvoiceDate, BillingCountry FROM chinook.customers
 JOIN chinook.invoices
